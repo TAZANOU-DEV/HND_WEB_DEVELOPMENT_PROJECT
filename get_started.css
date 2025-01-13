@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+flex-direction: column;
+}
+
+.container{
+    display: flex;
+
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    
+}
+
+.left{
+    
+}
+
+h4{
+    font-size: xx-large;
+}
+button{
+    height: 50px;
+    width: 160px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 8px;
+    background-color: rgba(108, 99, 255, 1);
+    border-style: ridge;
+    color: white;
+    font-weight:bolder;
+   border-color:rgba(0, 16, 238, 1) ;
+   transition: 0.8s;
+}
+
+.get_started_icon{
+    width: 90%;
+    margin-top: 40px;
+
+    
+
+}
+.login{
+    font-weight: bolder;
+    background-color:rgba(217, 217, 217, 1);
+    color:rgba(0, 16, 238, 1);
+    border-color:rgba(112, 112, 112, 1);
+    transition: 0.8s;
+}
+button:hover{
+    background-color:rgb(5, 10, 117)  ;
+    transform: scale(1.2);
+}
+
+.login:hover{
+    background-color:rgb(176, 172, 172) ;
+    transform: scale(1.2);
+
+}
+
