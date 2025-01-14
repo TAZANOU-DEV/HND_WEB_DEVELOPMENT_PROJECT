@@ -63,3 +63,31 @@ button:hover{
 
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container{
+        display: flex;
+flex-direction:column-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+
+    }
+
+    H4{
+        margin-top: 40px;
+        font-size:25px;
+        margin-bottom: 30px;
+
+    }
+
+    button{
+height: 70px;
+width: 400px;
+
+    }
+  }
