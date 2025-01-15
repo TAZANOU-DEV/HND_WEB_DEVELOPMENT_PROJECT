@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-image: url('icons/rgister page icon/register page.png'); 
+}
+
+.hg{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container{
+    height: 350px;
+    width: 400px;
+    background-color:rgba(114, 108, 108, 0.911);
+    margin-top: 35%;
+    padding: 20px;
+    border-radius: 5px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: white;
+font-weight: bold;
+transition: 0.9s;
+backdrop-filter: blur(10px);
+}
+
+.container{
+    transform: scale(1.2);
+}
+
+label{
+    font-size: large;
+}
+input{
+    height: 40px;
+    width: 200px;
+    margin-left: 30px;
+    border-top: none; 
+    border-left: none;
+    border-right: none;
+    background-color:rgba(114, 108, 108, 0.911) ;
+    border-bottom-style: ridge;
+    border-bottom-color:white;
+
+}
+.name{
+    margin-left: 70px;
+}
+.email{
+    margin-left: 120px;
+}
+.password{
+    margin-left: 92px;
+}
+c_password{
+    margin-right: 10px;
+}
+button{
+    height: 50px;
+    width: 375px;
+    margin-top: 40px;
+    border-radius: 5px;
+    background-color: rgba(108, 99, 255, 1);
+    color: white;
+    font-weight: bolder;
+    border-style: ridge;
+    border-color:rgb(5, 10, 117) ;
+    transition: 0.8s;
+    
+}
+p{
+    margin-top: 10px;
+}
+button:hover{
+    transform: scale(1.1);
+    background-color:rgb(5, 10, 117) ;
+}
+
+::placeholder{
+    color: rgb(5, 10, 117) ;
+    font-weight: bold;
+}
+@media only screen and (max-width: 600px){
+
+    body{
+        background-image: none;
+    }
+
+.container{
+    height: 400px;
+    width: 250px;
+    background-color:rgba(114, 108, 108, 0.911);
+    margin-top: 65%;
+    padding: 30px;
+    border-radius: 5px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: white;
+font-weight: bold;
+
+}
+
+.input{
+    height: 40px;
+    width: 120px;
+    margin-left: 30px;
+    border-top: none; 
+    border-left: none;
+    border-right: none;
+    background-color:rgba(114, 108, 108, 0.911) ;
+    border-bottom-style: ridge;
+    border-bottom-color:white;
+
+
+}
+
+button{
+
+    height: 50px;
+    width: 250px;
+
+}
+
+.name{
+    margin-left: 0px;
+}
+.email{
+    margin-left: 0px;
+}
+.password{
+    margin-left: 0px;
+}
+c_password{
+
+
+}
+}
