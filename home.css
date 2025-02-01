@@ -13,11 +13,17 @@ body{
     align-items: center;
     justify-content: space-between;
 }
+
+.menu_bar{
+    
+    display: none;
+
+}
 .logo{
 
     
-    height: 100px;
-    width: 100px;
+    height: 30px;
+    width: 30px;
 }
 .s-name{
     color: brown;
@@ -27,6 +33,7 @@ body{
 }
 
 .ll{
+    display: none;
 
 }
 
@@ -139,27 +146,57 @@ h2:hover{
 .drop_down{
     display: none;
 
+
 }
 
-@media only screen and (max-width: 600px){
 
+
+@media only screen and (max-width: 600px){
     body{
 
 
     }
 
+    .bod{
+        margin-top: 0px;
+    }
+
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     .bod_left{
      
         display: none;
-
+    }
+    .bod_right{
+        height: 90%;
+        width: 1000px;
+        background-color:rgb(169, 166, 166);
+        flex-wrap: wrap-reverse;
+       
+    
+    }
+    .box1{
+    background-color: white;
+    border-radius: 10px;
+    }
+    .menu_bar{
+        
+    display: block;
+    height: 40px;
+    width: 40px;
 
     }
+     
+    .s-name{
 
+        font-size: 25px;
+    }
 
-
-
-
-
-
+    .bod_left_h{
+     position: absolute;
+    }
 
 }

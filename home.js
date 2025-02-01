@@ -24,5 +24,15 @@ function toggle_dropdown(){
         droppdown.style.display ="block";
     }
 
+    if (!event.target.matches('.yy')) {
+        var dropdowns = document.getElementsByClassName("drop_down");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.style.display === "block") {
+                openDropdown.style.display = "none";
+            }
+        }
+    }
+
 
 }
