@@ -20,8 +20,9 @@ body{
 
 }
 .logo{
-
-    
+   border: none;
+   color:none ;
+    background-color: white;
     height: 30px;
     width: 30px;
 }
@@ -33,14 +34,17 @@ body{
 }
 
 .ll{
-    display: none;
+    display: block;
 
 }
 
 
-.image-preview{
+#image-preview{
     height: 100px;
     width: 100px;
+    object-fit: cover;
+    border-radius:100%;
+    border: 2px solid #000;
 }
 
 .bod{
@@ -166,7 +170,11 @@ h2:hover{
         align-items: center;
         justify-content: space-between;
     }
+    .yy{
+        margin-top: 20px;
+    }
     .bod_left{
+        margin-top: 50px;
      
         display: none;
     }
@@ -189,6 +197,18 @@ h2:hover{
     width: 40px;
 
     }
+
+
+    .drop_down{
+        display: block;
+        padding-top: 15px;
+    }
+    
+.ll{
+    display: block;
+
+}
+
      
     .s-name{
 
