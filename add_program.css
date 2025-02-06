@@ -79,3 +79,36 @@ body{
     justify-content: center;
     margin-top: 20px;
 }
+
+
+@media only screen and (max-width: 600px){
+
+ .s-name{
+    font-size: 25px;
+ }
+ .arrow_left{
+    height: 10px;
+    width: 10px;
+ }
+ .ll{
+    display: none;
+ }
+ .hnd_program{
+    font-size:xx-large;
+ }
+ .aaa{
+    font-size: xx-large;
+ }
+ .container_body{
+    background-color: rgba(147, 141, 141, 0.595);
+    margin-right: 100px;
+    border-radius: 15px;
+ }
+ .container{
+    
+ }
+
+
+
+}
+    
