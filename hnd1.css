@@ -106,3 +106,44 @@ a{
     text-decoration: underline;
     text-decoration-color: blueviolet;
 }
+
+@media only screen and (max-width: 600px){
+
+    .s-name{
+
+        font-size: 25px;
+    }
+    .ll{
+     
+        display: none;
+    }
+    .hnd_program{
+
+        font-size: 13px;
+    }
+     .arrow_left{
+        height: 15px;
+        width: 13px;
+     }
+     .folder{
+      height: 20px;
+      width: 20px;
+
+     }
+     .container_body{
+        background-color: rgba(147, 141, 141, 0.595);
+        margin-right: 100px;
+        border-radius: 15px;
+     }
+     .sch{
+        font-size: 20px;
+        margin-top: 10px;
+     }
+     .container{
+        margin: 20px;
+     }
+
+
+
+
+}
