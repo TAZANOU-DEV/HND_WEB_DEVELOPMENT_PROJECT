@@ -40,6 +40,12 @@ body{
     margin-right: 20px;
     color: rgba(0, 0, 0, 0.426);
     text-decoration: none;
+
+}
+.hnd_program:hover{
+
+    color: rgba(137, 43, 226, 0.588);
+
 }
 .head{
     display: flex;
