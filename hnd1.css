@@ -118,8 +118,9 @@ a{
         display: none;
     }
     .hnd_program{
+        margin-right: 0px;
 
-        font-size: 13px;
+        font-size: 14px;
     }
      .arrow_left{
         height: 15px;
@@ -142,8 +143,14 @@ a{
      .container{
         margin: 20px;
      }
+     .school{
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    .sch{
+        font-size: 20px;
+        margin-top: 15px;
 
 
-
-
+}
 }

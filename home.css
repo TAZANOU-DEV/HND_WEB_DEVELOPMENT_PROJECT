@@ -202,6 +202,9 @@ h2:hover{
     .drop_down{
         display: block;
         padding-top: 15px;
+        padding-left: 100px;
+        height: 50px;
+        width: 50px;
     }
     
 .ll{
@@ -217,6 +220,13 @@ h2:hover{
 
     .bod_left_h{
      position: absolute;
+    }
+    .logo{
+        display: none;
+
+    }
+    #image-preview{
+       display: none;
     }
 
 }
