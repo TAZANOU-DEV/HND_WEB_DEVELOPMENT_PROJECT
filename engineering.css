@@ -81,16 +81,24 @@ a{
     text-decoration-color: blueviolet;
 }
 
-@media only screen and(max-width:600px){
-.logo{
-    display: none;
-}
-#image-preview{
-    display: none;
-}
-.ll{
-    display: none;
-}
+@media only screen and (max-width:600px){
+    .s-name {
+        font-size: 18px;
+    }
+
+    .container_body {
+        min-height: 400px;
+        padding: 10px;
+    }
+
+    .hnd_program, .hn, .engineer {
+        font-size: 16px;
+    }
+
+    .depart {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
 
 
 
