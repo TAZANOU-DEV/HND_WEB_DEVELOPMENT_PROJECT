@@ -44,7 +44,7 @@ function markAttendance(cell) {
 }
 
 prevMonthBtn.addEventListener("click", () => {
-    currentDate.setMonth(currentDate.getMonth() - 1);
+    currentDate.setMonth(currentDate.getMonth() - 1);   
     renderCalendar();
 });
 
