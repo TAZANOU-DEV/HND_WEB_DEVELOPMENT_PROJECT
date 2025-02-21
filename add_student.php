@@ -23,8 +23,10 @@
          </div>
 
          <div class="container_body">
+            <form action="add_studentt.php" method="post">
 
              <div class="bod_left">
+
                  <label for="name">name</label>
                  <input type="text" name="name" placeholder="name">
                  <br>

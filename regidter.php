@@ -7,9 +7,17 @@
   $db_password = "";
   $db_name = "attendance";
 
+  $errors = [];
+
+
+  
+
 // connect database
 
 $conn = new mysqli($db_servername, $db_username, $db_password, $db_name);
+
+
+
 
 //check connection
 
@@ -42,7 +50,9 @@ $stmt = $conn->prepare("INSERT INTO register (school_name, email, password) VALU
 $stmt->bind_param("sss", $name, $email, $password);
 
 if ($stmt->execute()) {
-    echo "Registration successful!";
+    header("Location: home.php");
+
+
 } else {
     echo "Error: " . $stmt->error;
 }
