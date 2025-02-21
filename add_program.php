@@ -29,15 +29,15 @@
                
             <div class="programs">
              <div class="programs1">
-             <a class="fld" href="hnd1.html"> <img src="/icons/HND 1 icon/gg.png" alt="" class="folder"> <span class="fold">HND 1</span></a>
+             <a class="fld" href="hnd1.php"> <img src="/icons/HND 1 icon/gg.png" alt="" class="folder"> <span class="fold">HND 1</span></a>
              </div>
 
              <div class="programs1">
-              <a class="fld" href="hnd2.html"> <img src="/icons/HND 1 icon/gg.png" alt="" class="folder"> <span class="fold">HND 2</span></a>
+              <a class="fld" href="hnd2.php"> <img src="/icons/HND 1 icon/gg.png" alt="" class="folder"> <span class="fold">HND 2</span></a>
               </div>
 
               <div class="programs1">
-                <a class="fld" href="hnd3.html"> <img src="/icons/HND 1 icon/gg.png" alt="" class="folder"> <span class="fold">HND 3</span></a>
+                <a class="fld" href="hnd3.php"> <img src="/icons/HND 1 icon/gg.png" alt="" class="folder"> <span class="fold">HND 3</span></a>
                 </div>
    
               <a class="fld" href="#">

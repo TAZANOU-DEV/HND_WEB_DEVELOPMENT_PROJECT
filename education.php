@@ -27,11 +27,11 @@
      <div class="container_body">
 
         <div class="line">
-           <a href="add_program.html"> <p class="hnd_program">HND program</p></a>
-          <a href="add_program.html"> <img src="/icons/HND 1 icon/1.png" alt="" class="arrow"></a>
-           <a href="hnd3.html"><img src="/icons/HND 1 icon/gg.png" alt="" class="folder"></a>
-            <a href="hnd3.html"><p class="hn">HND 3</p></a>
-           <a href="hnd3.html"> <img src="/icons/HND 1 icon/1.png" alt="" class="arrow"></a>
+           <a href="add_program.php"> <p class="hnd_program">HND program</p></a>
+          <a href="add_program.php"> <img src="/icons/HND 1 icon/1.png" alt="" class="arrow"></a>
+           <a href="hnd1.php"><img src="/icons/HND 1 icon/gg.png" alt="" class="folder"></a>
+            <a href="hnd1.php"><p class="hn">HND 1</p></a>
+           <a href="hnd1.php"> <img src="/icons/HND 1 icon/1.png" alt="" class="arrow"></a>
             <p class="engineer">School of education</p>
 
 

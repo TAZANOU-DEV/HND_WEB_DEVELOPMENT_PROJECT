@@ -30,6 +30,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"  ){
 $name = mysqli_real_escape_string($conn, $name);
 $email= mysqli_real_escape_string($conn, $email);
 $password = mysqli_real_escape_string($conn, $password);
+
+if(empty($errors)){
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+}
  
 
 //insert dt in db
