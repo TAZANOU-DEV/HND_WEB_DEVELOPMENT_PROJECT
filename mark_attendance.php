@@ -49,35 +49,69 @@ $result = $conn->query($sql);
           </div>
       </div>
 
+      <div class="body">
+
+        <?php while ($row = $result->fetch_assoc()) { ?>
+           
+
+            <div class="names">
+                <div class="data1">
+        
+           <h3> <?= $row["matricule"] ?></h3>
+           <h3 class="h33"> <?= $row["name"] ?></h3>
+                </div>
+
+                <div class="btn">
+
+                <button>present</button>
+                <button class="orange">late</button>
+                <button class="red">absent</button>
+                </div>
+
+            </div>
+        
+        <?php } ?>
     
 
+</div>
 
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>tell</th>
-            <th>Program</th>
-            <th>Department</th>
-            <th>parent_contact</th>
-            <th>Picture</th>
-        </tr>
-        <?php while ($row = $result->fetch_assoc()) { ?>
-        <tr>
-            <td><?= $row["matricule"] ?></td>
-            <td><?= $row["name"] ?></td>
-            <td><?= $row["email"] ?></td>
-            <td><?= $row["tell"] ?></td>
-            <td><?= $row["program"] ?></td>
-            <td><?= $row["department"] ?></td>
-            <td><?= $row["parent_contact"] ?></td>
-            <td><img src="<?= $row["picture"] ?>" width="100" height="100"></td>
-        </tr>
-        <?php } ?>
-    </table>
+
+<hr>
+
+<h1 id="date"></h1>
+
+<div class="contain">
+        <div class="status">
+            <span class="label">Present</span>
+            <span class="value">00</span>
+        </div>
+        <div class="status1">
+            <span class="label">Late</span>
+            <span class="value">00</span>
+        </div>
+        <div class="status2">
+            <span class="label">Absent</span>
+            <span class="value">00</span>
+        </div>
+    </div>
+
 
 </div>
+
+<script>
+        // Ensure the script runs after the DOM is fully loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            // Create a new Date object
+            const today = new Date();
+
+            // Format the date as desired
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = today.toLocaleDateString('en-US', options);
+
+            // Insert the formatted date into the HTML element with id "date"
+            document.getElementById('date').textContent = formattedDate;
+        });
+    </script>
     
 </body>
 </html>

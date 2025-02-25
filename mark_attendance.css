@@ -41,3 +41,115 @@ body{
      border-radius:100%;
      border: 2px solid #000;
  }
+ .body{
+    background-color: rgb(214, 212, 212);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+ .names{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px;
+    
+ }
+ h3{
+    margin: 7px;
+ }
+ .data1{
+    display: flex;
+ }
+
+ button{
+    height: 32px;
+    width: 100px;
+    border-radius: 15px;
+    background-color: white;
+    color: green;
+    border-color: green;
+    margin: 3px;
+    
+ }
+ button:hover{
+    background-color: green;
+    color: white;
+    border-color: white;
+ }
+ .orange{
+    color: orange;
+    border-color: orange;
+
+ }
+ .orange:hover{
+    background-color: orange;
+    color: white;
+ }
+ .red{
+    color: red;
+    border-color: red;
+
+ }
+ .red:hover{
+    background-color: red;
+    color: white;
+ }
+ 
+
+ .contain {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.status {
+    margin: 10px 0;
+    text-align: center;
+    height: 200px;
+    width: 400px;
+    background-color: rgb(3, 93, 3);
+    border-radius: 15px;
+}
+
+.status1 {
+    margin: 10px 0;
+    text-align: center;
+    height: 200px;
+    width: 400px;
+    background-color: rgb(244, 161, 7);
+    border-radius: 15px;
+}
+
+.status2{
+    margin: 10px 0;
+    text-align: center;
+    height: 200px;
+    width: 400px;
+    background-color: rgb(161, 1, 1);
+    border-radius: 15px;
+}
+
+.label {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.value {
+    font-size: 100px;
+    font-weight: bold;
+    color: white;
+    display: block;
+    margin-top: 5px;
+}
