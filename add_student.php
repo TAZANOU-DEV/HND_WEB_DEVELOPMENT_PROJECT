@@ -21,9 +21,10 @@
             
              </div>
          </div>
+         <form action="add_studentt.php" method="post">
 
          <div class="container_body">
-            <form action="add_studentt.php" method="post">
+        
 
              <div class="bod_left">
 
@@ -92,6 +93,7 @@
          </div>
      
      </div>
+     </form>
 
 <script src="add_student.js"></script>
 </body>
