@@ -73,7 +73,7 @@
                 <div class="ll">
 
                     <label for="picture">picture:</label>
-                    <input type="file" accept="image/*"  width="300px" placeholder="Logo" class="logo" id="ima">
+                    <input type="file" accept="image/*" name="picture"  width="300px" placeholder="Logo" class="logo" id="ima">
                     <img src="" id="image-preview" alt="">
             
                      
@@ -86,7 +86,7 @@
                       <input type="text" name="Matricule" placeholder="Matricule">
 
                       <br>
-                      <button type="submit">add student</button>
+                      <a href="mark_attendance.php"><button type="submit">add student</button></a>
                 
              </div>
 
