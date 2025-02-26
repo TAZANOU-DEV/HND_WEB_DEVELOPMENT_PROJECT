@@ -11,8 +11,8 @@
        <div class="left">
 
             <H4>Track student attendance effectively<br>with our student tracker</H4>
-            <a href="register.html">  <button class="get_started">Get started</button></a>
-            <a href="login.html">  <button class="login">Login</button></a>
+            <a href="register.php">  <button class="get_started">Get started</button></a>
+            <a href="login.php">  <button class="login">Login</button></a>
        </div>
 
        <div class="right">

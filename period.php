@@ -14,7 +14,7 @@
         <h1>choose period of the day before marking attendance</h1>
 
         <div class="period">
-           <a href="mark_attendance.php"> <div class="box">
+           <a href="choose.php"> <div class="box">
 
 
                 <p> first period</p>
@@ -22,21 +22,21 @@
                 <h2>8:00 - 10:00</h2>
             </div></a>
 
-            <a href="mark_attendance.php"> <div class="box" id="box1">
+            <a href="choose.php"> <div class="box" id="box1">
 
 
                 <p> second period</p>
 
                 <h2>10:00 - 12:00</h2>
             </div></a>
-            <a href="mark_attendance.php"> <div class="box" id="box2">
+            <a href="choose.php"> <div class="box" id="box2">
 
 
                 <p> third period</p>
 
                 <h2>13:00 - 15:00</h2>
             </div></a>
-            <a href="mark_attendance.php"> <div class="box" id="box3">
+            <a href="choose.php"> <div class="box" id="box3">
 
 
                 <p> fourth period</p>
