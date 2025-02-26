@@ -153,3 +153,17 @@ body{
     display: block;
     margin-top: 5px;
 }
+
+.status:active{
+    background-color: rgb(3, 93, 3);
+    color: white;
+}
+.status1:active{
+    background-color: rgb(244, 161, 7) ;
+    color: white;
+}
+.status2:active{
+    background-color: rgb(161, 1, 1)  ;
+    color: white;
+
+}

@@ -27,6 +27,49 @@ if (!empty($program) && !empty($department)) {
     $sql = "SELECT * FROM add_student";
     $result = $conn->query($sql);
 }
+
+
+
+
+
+$conn = new mysqli("localhost", "root", "", "attendance");
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Check if the request is POST and contains required fields
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['student_name']) && isset($_POST['status'])) {
+    $student_id = $_POST['student_name'];
+    $status = $_POST['status'];
+
+    // Check if the student already has an attendance record for today
+    $sql = "SELECT id FROM attendance WHERE student_name= ? AND date = CURDATE()";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $student_id);
+    $stmt->execute();
+    $stmt->store_result();
+
+    if ($stmt->num_rows > 0) {
+        // Update existing record
+        $update = "UPDATE attendance SET status = ? WHERE student_name = ? AND date = CURDATE()";
+        $stmt = $conn->prepare($update);
+        $stmt->bind_param("si", $status, $student_id);
+        $stmt->execute();
+    } else {
+        // Insert new attendance record
+        $insert = "INSERT INTO attendance (student_name, status, date) VALUES (?, ?, CURDATE())";
+        $stmt = $conn->prepare($insert);
+        $stmt->bind_param("is", $student_id, $status);
+        $stmt->execute();
+    }
+
+    echo json_encode(["success" => true]);
+}
+
+$conn->close();
+
+
 ?>
 
 <!DOCTYPE html>
@@ -92,9 +135,11 @@ if (!empty($program) && !empty($department)) {
                             <h3 class="h33">' . $row["name"] . '</h3>
                         </div>
                         <div class="btn">
-                            <button class="green">Present</button>
-                            <button class="orange">Late</button>
-                            <button class="red">Absent</button>
+                            <button class="green" onclick="markAttendance(this, \'present\')">Present</button>
+                            <button class="orange" onclick="markAttendance(this, \'late\')">Late</button>
+                            <button class="red" onclick="markAttendance(this, \'absent\')">Absent</button>
+                             
+
                         </div>
                     </div>';
                 }
@@ -109,29 +154,65 @@ if (!empty($program) && !empty($department)) {
         <h1 id="date"></h1>
 
         <div class="contain">
-            <div class="status">
-                <span class="label">Present</span>
-                <span class="value">00</span>
-            </div>
-            <div class="status1">
-                <span class="label">Late</span>
-                <span class="value">00</span>
-            </div>
-            <div class="status2">
-                <span class="label">Absent</span>
-                <span class="value">00</span>
-            </div>
-        </div>
+    <div class="status">
+        <span class="label">Present</span>
+        <span id="present-count" class="value">0</span>
+    </div>
+    <div class="status1">
+        <span class="label">Late</span>
+        <span id="late-count" class="value">0</span>
+    </div>
+    <div class="status2">
+        <span class="label">Absent</span>
+        <span id="absent-count" class="value">0</span>
+    </div>
+</div>
+
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const today = new Date();
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            const formattedDate = today.toLocaleDateString('en-US', options);
-            document.getElementById('date').textContent = formattedDate;
+            document.getElementById('date').textContent = today.toDateString();
         });
+
+        function markAttendance(button, status) {
+    let studentDiv = button.closest(".names");
+    let studentId = studentDiv.getAttribute("data-id"); // Ensure each student div has a data-id
+
+    let currentStatus = studentDiv.getAttribute("data-status");
+    if (currentStatus === status) return;
+
+    // Update UI
+    if (currentStatus) {
+        document.getElementById(currentStatus + "-count").textContent--;
+    }
+    document.getElementById(status + "-count").textContent++;
+    studentDiv.setAttribute("data-status", status);
+
+    // Reset button styles
+    let buttons = studentDiv.querySelectorAll(".btn button");
+    buttons.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    // Send data to PHP using Fetch API
+    fetch("mark_attendance.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `student_id=${studentId}&status=${status}`
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            console.log("Attendance updated successfully");
+        }
+    })
+    .catch(error => console.error("Error:", error));
+}
+
+
     </script>
+</body>
 </body>
 </html>
 
