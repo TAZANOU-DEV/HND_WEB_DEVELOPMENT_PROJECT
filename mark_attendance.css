@@ -167,3 +167,40 @@ body{
     color: white;
 
 }
+button.active {
+    background-color: green !important;
+    color: white !important;
+    border-color: white !important;
+}
+
+.orange.active {
+    background-color: orange !important;
+}
+
+.red.active {
+    background-color: red !important;
+}
+.student-list {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.student-list.show {
+    display: block;
+}
+.student-list ul {
+    list-style: none;
+    padding: 0;
+}
+.student-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s;
+}
+.student-list li:hover {
+    background: #f0f0f0;
+}

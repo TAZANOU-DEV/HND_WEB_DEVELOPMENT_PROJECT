@@ -154,19 +154,26 @@ $conn->close();
         <h1 id="date"></h1>
 
         <div class="contain">
-    <div class="status">
+        <div class="status" onclick="showStudents('present')">
         <span class="label">Present</span>
         <span id="present-count" class="value">0</span>
     </div>
-    <div class="status1">
+    <div class="status1" onclick="showStudents('late')">
         <span class="label">Late</span>
         <span id="late-count" class="value">0</span>
     </div>
-    <div class="status2">
+    <div class="status2" onclick="showStudents('absent')">
         <span class="label">Absent</span>
         <span id="absent-count" class="value">0</span>
     </div>
 </div>
+
+
+<div id="student-list" class="student-list">
+    <h2 id="list-title"></h2>
+    <ul id="student-names"></ul>
+</div>
+
 
     </div>
 
@@ -211,6 +218,27 @@ $conn->close();
 }
 
 
+function showStudents(status) {
+        let studentList = document.getElementById('student-list');
+        let listTitle = document.getElementById('list-title');
+        let studentNames = document.getElementById('student-names');
+
+        listTitle.textContent = status.charAt(0).toUpperCase() + status.slice(1) + " Students";
+        studentNames.innerHTML = ""; // Clear previous list
+
+        document.querySelectorAll(".names").forEach(student => {
+            if (student.getAttribute("data-status") === status) {
+                let name = student.querySelector(".h33").textContent;
+                let li = document.createElement("li");
+                li.textContent = name;
+                studentNames.appendChild(li);
+            }
+        });
+
+        studentList.classList.add("show");
+    }
+
+
     </script>
 </body>
 </body>
@@ -220,5 +248,5 @@ $conn->close();
 if (isset($stmt)) {
     $stmt->close();
 }
-$conn->close();
+
 ?>

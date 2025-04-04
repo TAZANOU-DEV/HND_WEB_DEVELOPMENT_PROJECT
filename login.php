@@ -11,20 +11,20 @@
 
     <div class="container">
 
-        <form action="loginn.php"method="post" >
-            <label class="em" for="email">Email:</label>
-            <input type="email" class="email" name="email" placeholder="example@gmail.com" required >
-<br>
+    <form action="home.php" method="post">
+    <label class="em" for="email">Email:</label>
+    <input type="email" class="email" name="email" placeholder="example@gmail.com" required>
+    <br>
 
-            <label for="password">Password:</label>
-            <input type="password" class="password" name="password" placeholder="******" required>
-<br>
-           <a href="home.php"> <button type="submit" class="button">Login</button></a>
+    <label for="password">Password:</label>
+    <input type="password" class="password" name="password" placeholder="******" required>
+    <br>
 
-            <P>Don't have an account? <a class="register" href="register.php">register</a></P>
+    <button type="submit" class="button">Login</button>
+</form>
 
-        </form>
-        
+<p>Don't have an account? <a class="register" href="register.php">Register</a></p>
+
     </div>
     </div>
     
